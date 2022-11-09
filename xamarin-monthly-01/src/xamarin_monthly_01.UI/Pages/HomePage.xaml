@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MvxContentPage
+    x:TypeArguments="viewModels:HomePageModel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    x:Class="xamarin_monthly_01.UI.Pages.HomePage"
+    xmlns:viewModels="clr-namespace:xamarin_monthly_01.Core.ViewModels.Home;assembly=xamarin_monthly_01.Core"
+    xmlns:models="clr-namespace:xamarin_monthly_01.Core.Models;assembly=xamarin_monthly_01.Core"
+    x:DataType="viewModels:HomePageModel"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    Title="Main page">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="shadows"
+                    Command="{Binding ShadowsNavigateCommand}"/>
+            <Grid ColumnDefinitions="*, auto">                
+                <Entry Text="{Binding SearchPhrase}"
+                       Placeholder="Wrocław"/>
+                <Button Grid.Column="1"
+                        Text="search"
+                        Command="{Binding SearchCommand}"/>
+            </Grid>
+            <CollectionView ItemsSource="{Binding Locations}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:LocationInfo">
+                        <StackLayout Orientation="Horizontal"
+                                     xct:TouchEffect.NativeAnimation="True"
+                                     xct:TouchEffect.Command="{Binding
+                              Path=BindingContext.NavigateToCityCommand,
+                              Source={RelativeSource AncestorType={x:Type CollectionView}}}"
+                                     xct:TouchEffect.CommandParameter="{Binding .}">
+                            <Label Text="{Binding Id}"/>
+                            <Label Text="{Binding Name}"/>
+                            <Label Text="{Binding Country}"/>
+                            <Label Text="{Binding Timezone}"/>
+                            <Label Text="{Binding AdminArea}"/>
+                            <Label Text="{Binding Lon}"/>
+                            <Label Text="{Binding Lat}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</views:MvxContentPage>
