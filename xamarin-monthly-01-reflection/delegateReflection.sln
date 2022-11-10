@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "delegateReflection", "delegateReflection\delegateReflection.csproj", "{0618E1F9-8916-4291-910B-907AED5A3FA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeNuget", "SomeNuget\SomeNuget.csproj", "{76CEA946-E2FE-4898-BFF5-8C73AC06D584}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0618E1F9-8916-4291-910B-907AED5A3FA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0618E1F9-8916-4291-910B-907AED5A3FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0618E1F9-8916-4291-910B-907AED5A3FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0618E1F9-8916-4291-910B-907AED5A3FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76CEA946-E2FE-4898-BFF5-8C73AC06D584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76CEA946-E2FE-4898-BFF5-8C73AC06D584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76CEA946-E2FE-4898-BFF5-8C73AC06D584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76CEA946-E2FE-4898-BFF5-8C73AC06D584}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5E9F8AE-935B-4505-AD3E-EE441C8E4D70}
+	EndGlobalSection
+EndGlobal
